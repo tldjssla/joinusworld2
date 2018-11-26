@@ -1,32 +1,856 @@
-.App {
+/* Extra small devices Phones (<768px) (Class names : .visible-xs-block, hidden-xs) */
+/* Small devices Tablets (≥768px) (Class names : .visible-sm-block, hidden-sm) */
+/* Medium devices Desktops (≥992px) (Class names : .visible-md-block, hidden-md) */
+/* Large devices Desktops (≥1200px) (Class names : .visible-lg-block, hidden-lg) */
+/* For more information : http://getbootstrap.com/css/#responsive-utilities   https://getbootstrap.com/docs/3.3/css/#responsive-utilities  */
+/* https://stackoverflow.com/questions/14207109/hiding-elements-in-responsive-layout */
+
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+  .sideMenuIcon {z-index: 1040 !important; right: 25px !important;}
+  .loginForm {width: 90%;}
+  #accountView .loginForm { padding: 10px 20px;}
+  .tooltipActionButton {color: #777; padding: 10px 10px 0 10px !important;}
+}
+/* No media query since this is the default in Bootstrap */
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .sideMenuIcon {z-index: 1040 !important; right: 50px !important;}
+  .loginForm {width: 60%;}
+  #accountView .loginForm { padding: 20px 40px;}
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+
+@media (max-width: 992px){
+  .myMainContent {margin-top: 65px;}
+  .homepageIntro .thumb_row2 {max-width: 90%; margin-left: 5%; padding-top: 15px; padding-bottom: 15px;}
+}
+
+
+
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px){
+  .myMainContent {margin-top: 0px;}
+  .homepageIntro .thumb_row2 {max-width: 40%; margin-left: 30%; padding-top: 15px; padding-bottom: 15px;}
+  .rsc-arrow_left, .rsc-arrow_right {background-size: 50%;}
+  .myBody { min-height: 600px; padding-top: 70px;padding-bottom: 100px;}
+  /*form validation tooltip*/
+  .__react_component_tooltip {width: 180px;}
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .loginForm {width: 45%;}
+  #resetPasswordView {width: 50%; margin-left: 25%}
+  /*form validation tooltip*/
+  .__react_component_tooltip {width: 250px;}
+}
+
+
+
+
+
+
+.navbar-fixed-top {z-index: 1000;} /* default: 1030, khi show sidemenu se above */
+#topNavBar .navbarSectionIcon a {padding: 0; margin-right: 15px;}
+#topNavBar .navbar-left {margin-left: 20px;}
+/*#mobileNavBar { float: left;}*/
+#mobileNavBar img { width: 180px;  position: absolute;  right: 10px;  top: 10px;}
+
+
+/* ---- sidemenu start ----- */
+#sideMenu .search {
+  background-color: #f0f1f2 !important;
+  border-bottom: 1px solid #e0dbdb;
+}
+#sideMenu .inputSearch {
+  width: 90%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /*border: 2px solid #ccc;*/
+  border: none;
+  /*border-radius: 4px;*/
+  font-size: 16px;
+  /*background-color: white;*/
+
+  background-color: inherit;
+  background-position: 10px 8px;
+  background-repeat: no-repeat;
+
+  padding: 12px 20px 12px 45px;
+  -webkit-transition: width 0.4s ease-in-out;
+  -o-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+/*#sideMenu .inputSearch:focus {width: 100%;}*/
+#sideMenu .userAvatarInfo {display: -ms-flexbox !important;display: flex !important;}
+#sideMenu .userAvatarInfo .avatar {width: 65px; height: 65px;}
+#sideMenu .buttons {display: -ms-flexbox !important;display: flex !important; margin-top: 20px; margin-bottom: 15px;}
+#sideMenu .buttons .button {-ms-flex: 1 1;flex: 1 1; font-size: 150%; text-align: center;}
+#sideMenu .buttons .button a {color: #04cbd4;}
+#sideMenu .buttons .button a span {margin-left: 0px;}
+#sideMenu .buttons .signInButton a {color: inherit;}
+#sideMenu .buttons .notificationCount {position: relative;}
+#sideMenu .buttons .notificationCount .badge { top: -5px !important;  left: 37px !important;}
+#sideMenu .writeBtn {position: absolute;  bottom: 10px;  right: 10px;  color: #04cbd4; font-size: 130%;}
+
+#sideMenu .Collapsible {margin: 0 25px 15px 25px;}
+#sideMenu .Collapsible a {text-decoration: none; padding: 0px;}
+#sideMenu .Collapsible .innerButton {padding: 5px 0 2px 5px;padding-left: 10px; color: #b9b8b8;}
+#sideMenu .Collapsible .innerButton:hover {color: grey;}
+#sideMenu .Collapsible .active {background-color: #eaeaea;}
+
+#sideMenu .sideMenuHyperlink { padding: 0 25px 15px 25px; color: inherit;}
+
+.sideMenuPanel {
+  /*background-color: #f0f1f2 !important; */
+  background-color: white !important;
+  padding: 0px !important;
+}
+.sideMenuBurgerBar
+{
+  /*background: #373a47;*/
+  background: #777
+} /* .bm-burger-bars */
+.sideMenuCross {
+  height: 22px !important;
+}  /* .bm-cross-button .bm-cross */
+
+.bm-burger-button {
+  position: fixed;
+  /*width: 36px;*/
+  /*height: 30px;*/
+  /*top: 10px;*/
+
+  width: 28px;
+  height: 24px;
+  top: 13px;
+
+
+  left: 13px;
+  /*left: 36px;*/
+  /*right: 36px;*/
+  /*top: 36px;*/
+
+}
+
+
+
+/* Original */
+.bm-morph-shape {
+  fill: #373a47;
+}
+.bm-menu {
+  background: #373a47;
+}
+.bm-menu a {
+  color: #b8b7ad;
+}
+.bm-menu a:hover,
+.bm-menu a:focus {
+  color: #c94e50;
+}
+.bm-item-list a {
+  padding: 0.8em;
+}
+.bm-item-list a span {
+  margin-left: 10px;
+  font-weight: 700;
+}
+.bm-cross {
+  background: #bdc3c7;
+}
+.bm-menu {
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* ---- sidemenu end ----- */
+
+
+
+
+
+
+
+
+
+html, body {
+  background-color: #f0f1f2;
+  height: 100%;
+  min-height: 100%;
+  color: #777;
+  /*padding-top: 70px;*/
+}
+body {font-family: 'Noto Sans', sans-serif !important;}
+
+
+hr {border-bottom: 0.1px solid #e0dbdb;}
+.block-ui-overlay {height: auto;}
+.block-ui-message {font-size: 130%;}
+
+
+
+
+
+/*override :  react-hint/css/index.css   */
+.react-hint:after {
+  /*border: 5px solid transparent; : ko co arrow luon */
+  border-top: 5px solid #68ddde !important;
+}
+.react-hint__content {background-color: #68ddde;}
+
+.skylight-dialog {height: auto !important; min-height: inherit !important;}
+
+a:hover {text-decoration: none;color: #1d2129 !important;}
+#root {height: 100%;}
+
+.hidden {display: none;}
+.shown {display: block;}
+
+.navbar .topLeftLogo {margin-top: -5px; width: 230px;}
+.navbar .active > a { color: black !important;; background-color: rgb(248, 248, 248) !important; border-bottom: 2px #68ddde solid;}
+.navbar .__react_component_tooltip {width: auto !important; }
+.navbar .__react_component_tooltip.tooltipForBtn {background-color: #0e8fa3;}
+.navbar .__react_component_tooltip.tooltipForBtn::after {border-bottom-color: #0e8fa3;}
+.navbar .spanLanguage > a {padding-right: 0px;}
+.navbar .myNavbarRight a { color: #04cbd4 !important; }
+.navbar .myNavbarRight .notificationCount a:hover, .navbar .myNavbarRight .avatar .block:hover, .navbar .myNavbarRight a:hover {color: #03a7af !important;}
+.navbar .myNavbarRight .selectedLanguage { font-weight: bolder;}
+.navbar .myNavbarRight .searchBox .glyphicon { color: grey;}
+.navbar .myNavbarRight .searchBox {padding: 0px; height: 50px;}
+.navbar .myNavbarRight .notificationCount { margin-right: 5px; }
+.navbar .myNavbarRight .notificationCount .glyphicon  { font-size: 130%; }
+.navbar .myNavbarRight .notificationCount .badge, #sideMenu .buttons .notificationCount .badge { background-color: red;  color: white;  position: absolute;  top: 10px;  left: 27px; font-weight: normal;  padding: 2px 5px;}
+
+.navbar .myNavbarRight .avatar a {padding: 5px;}
+.navbar .myNavbarRight .avatar .block { display: block;}
+.navbar .myNavbarRight .avatar .block img { width: 41px; height: 41px; display: inline; }
+.navbar .myNavbarRight .avatar .block label { margin-left: 5px; cursor: pointer;}
+
+
+
+
+
+.loadingSpinnerInline .loader .loader-inner {display: inline-block;}
+.loadingSpinnerInline .loader .loader-inner.ball-pulse div {width: 7px; height: 7px;}
+/*.react-scrollbar-default { height: auto !important;}*/
+.react-scrollbar-default .-reactjs-scrollbar-thumb {width: 4px !important;}
+.react-scrollbar-default .-reactjs-scrollbar-track\:vertical {width: 6px !important;}
+
+/* popup language selection in Nav bar */
+#languageSelectionInNavBar { padding: 10px;}
+#languageSelectionInNavBar table tr td {
+  padding: 7px 5px;
+  text-align: left;
+  cursor: pointer;
+  color: #000;
+}
+#languageSelectionInNavBar table tr td:hover {color: #00a7ae; font-weight: bolder; }
+#languageSelectionInNavBar .header {color: #2a6583;}
+.tippy-tooltip {background-color: white;  border: 1px solid #00a7ae; padding: 0px; color: inherit; -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.40); box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.40);}
+.tippy-tooltip .arrow-regular {border-bottom: 7px solid #00a7ae !important;}
+.react-datepicker {font-size: 12px;}
+.react-selectize.root-node {width: auto;}
+/*#sourceInput {margin-top: 10px;}*/
+#sourceInput .react-selectize.root-node .react-selectize-control .react-selectize-toggle-button-container {display: none;}
+#sourceInput .react-selectize.root-node .react-selectize-control .react-selectize-reset-button-container { margin-right: 8px;}
+
+.dropdownMenu { text-align: left;}
+.dropdownMenu a {display: block; color: #777;text-decoration: none;padding: 5px 20px;}
+.dropdownMenu a:hover {color: white; background-color: #68ddde;}
+.dropdownMenu a .glyphicon {margin-right: 5px;}
+
+#breadcrumbs { margin-top: 15px;}
+#breadcrumbs .breadcrumb { background-color: white; margin-bottom: 10px; padding-left: 0px;}
+#breadcrumbs ul li a { color: inherit; font-size: 15px;}
+#breadcrumbs ul li a.active {color: #777;}
+
+
+.myMainContent {min-height: 80%;}
+.myMainContent > div {margin-bottom: 15px;}
+.displayFlex {display: -ms-flexbox;display: flex;}
+.centerContent {background-color: white; padding: 1px 15px 10px 15px;}
+.centerContent .contentHeader {background-color: white; font-size: larger; padding: 0px 5px 10px 0px;}
+.alignRight {text-align: right;}
+.alignLeft {text-align: left;}
+.alignCenter {text-align: center;}
+.marginNone {margin: 0px;}
+.marginTopSmall {margin-top: 5px;}
+.marginTopMedium {margin-top: 10px;}
+.marginVerticalMedium {margin-top: 10px !important; margin-bottom: 10px !important;}
+.marginHorizontal20 {margin-left: 20px; margin-right: 20px;}
+.marginLeft30 {margin-left: 30px;}
+.marginRight40 {margin-right: 40px;}
+.paddingNone {padding: 0px;}
+.paddingTopMedium {padding-top: 10px;}
+.paddingLeftMedium {padding-left: 10px;}
+.paddingRightMedium {padding-right: 10px;}
+.paddingHorizonMedium {padding-left: 10px; padding-right: 10px;}
+.paddingVerticalMedium {padding-top: 10px; padding-bottom: 10px;}
+.noLeftBorder {border-left: none !important;}
+.noRightBorder {border-right: none !important;}
+.dontBreakOut {overflow-wrap: break-word;  word-wrap: break-word;}   /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+.orangeColor {color: orange !important;}
+
+.rootElement {position: relative;min-height: 100%;}
+.myFooter {background-color: #2f3031;padding: 15px 0px;position: absolute;  bottom: 0;  width: 100%;}
+.myFooter .intro {text-align: center;font-size: smaller;}
+.myFooter .intro p:first-child {margin-bottom: 0px;}
+.myFooter .intro p:last-child {margin-bottom: 0px;}
+.myFooter .sectionButton {text-align: center; padding-bottom: 10px; color: white; font-weight: normal;}
+.myFooter .sectionButton label {margin: 0 15px; font-weight: normal;}
+.myFooter .sectionButton label a:hover {color: grey !important;}
+
+.errorText {color: red;}
+.errorTextChangeColorOnly {color: red !important;}
+.cursorPointer {cursor: pointer;}
+.blankHyperlink {cursor: pointer;}
+.blankHyperlink:hover {color: #dcd6d6;}
+.languageBadge {padding: 3px 10px; background-color: #68ddde; font-weight: normal; border-radius: 3px; color: white;}
+
+.badgeQA {padding: 1px 5px; font-size: smaller; background-color: #80d283; font-weight: normal;  border-radius: 3px; color: white;}
+.badgeCommunity {padding: 1px 5px; font-size: smaller; background-color: #4786b3; font-weight: normal;  border-radius: 3px; color: white;}
+.badgeNotice {padding: 1px 5px; font-size: smaller; background-color: green; font-weight: normal;  border-radius: 3px; color: white;}
+.badgeGuestbook {padding: 1px 5px; font-size: smaller; background-color: blue; font-weight: normal;  border-radius: 3px; color: white;}
+
+.levelBadge {padding: 1px 5px; font-size: smaller; background-color: #68ddde; font-weight: normal;  border-radius: 3px; color: white; margin-right: 7px;}
+.columnNoPaddingLeft {padding-left: 0px;}
+.columnNoPaddingRight {padding-right: 0px;}
+.columnNoPadding {padding-right: 0px; padding-left: 0px;}
+
+.userAvatarInfo {width: auto; margin: 5px 0px 5px 10px; position: relative; display: -ms-flexbox; display: flex;color: black;}
+.userAvatarInfo .rightColumn {padding-left: 15px;}
+.userAvatarInfo .rightColumn p {margin: 0px;}
+.userAvatarInfo .userBadge {position: absolute;  padding: 4px 8px;  top: -5px;  left: -10px;}
+.userAvatarInfo .rightColumn p strong {margin-right: 5px !important;}
+.userAvatarInfo .rightColumn p.career {font-size: 90%; margin-top: 3px; text-align: left;}
+.userAvatarInfo .rightColumn .reputationInfo {border: 1px solid #68ddde; padding: 1px 5px;  border-radius: 5px;}
+.userAvatarInfo .rightColumn .reputationInfo .activityPoint {color: #68ddde;}
+.userAvatarInfo .rightColumn .reputationInfo .popularityPoint {color: #ff456c;}
+.userAvatarInfo .rightColumn .reputationInfo .confidencePoint {color: #008f22;}
+.userAvatarInfo .rightColumn .snsLogo {width: 20px;}
+.userAvatarInfo .leftColumn img { width: 50px; height: 50px; }
+
+.userLeftBarInfo .avatar {width: 120px; margin-bottom: 10px !important; height: 120px; display: block; margin: auto;}
+.userLeftBarInfo .userInfo { background-color: white; padding: 15px;}
+.userLeftBarInfo .userInfo img {width: 24px;}
+.userLeftBarInfo hr {margin: 10px 0px;}
+
+.namecardHeader {position: relative;}
+.namecardHeader .userAvatarInfo {width: auto;}
+.namecardHeader .snsLogo {position: absolute; right: 5px; top: 0px;}
+.namecardFooter {color: #777777; position: relative;margin-top: 5px;}
+.namecardFooter table tr td {padding-right: 20px;}
+.namecardFooter table tr td label {color: black; font-weight: normal;}
+.namecardFooter .namecardFooterAction {position: absolute;  right: 0;  bottom: 0;}
+.namecardFooter .namecardFooterAction a {margin-left: 10px;}
+
+.actionBtn {padding: 15px 0px; text-align: right;}
+.actionBtn button {margin: 0px 5px;}
+.actionBtn.alignCenter {text-align: center;}
+
+.tagList {margin-left: 5px; }
+.tagList button {margin-left: 10px; background-color: #cacaca;}
+.tagList .tagLabel {background-color: #e8e8e8;  font-weight: normal;  padding: 2px 7px;  border-radius: 5px;  margin: 0 5px 3px 0;}
+.tagList .tagLabel a {color: inherit !important;}
+.tagList .tagEdit .glyphicon {font-size: 20px;  margin-top: 5px; margin-right: 10px; cursor: pointer; -ms-flex: 1 1; flex: 1 1;}
+
+#namecardInResponse { border: 1px solid #68ddde; padding: 10px; border-radius: 7px;}
+/*#namecardInResponse label {margin-bottom: 0px;}*/
+#namecardInResponse .userActivityInfo .leftColumn label {margin-right: 5px;}
+#namecardInResponse .userActivityInfo .leftColumn span {margin-right: 10px;}
+#namecardInResponse .userActivityInfo .leftColumn div a {margin-right: 10px; color: #68ddde;}
+#namecardInResponse .userActivityInfo .rightColumn {border-left: 1px solid #e0dbdb; }
+/*#namecardInResponse .userActivityInfo .rightColumn ul {height: 100px; overflow-y: scroll; padding-left: 20px;}*/
+#namecardInResponse .userActivityInfo .rightColumn ul li a {color: inherit;}
+
+
+#namecardInPopup { padding: 10px; border-radius: 7px; width: 400px; background-color: white;}
+
+
+
+.numStatsCount {background-color: #e8e8e8; font-weight: normal; padding: 2px; border-radius: 3px;}
+button.noVote {background-color: #cacaca;  color: white;  border: none; cursor: auto;}
+button.negativeNoVote {color: #e26666;}
+button.outlineBtn, a.outlineBtn, .outlineText {border: 1px #68ddde solid; color: #68ddde; font-weight: normal; background-color: white;padding: 1px 5px;}
+
+.positiveBtn {background-color: #5cc5ca !important; border: none; color: white;}
+.positiveBtn:hover {background-color: #6dd9de !important; color: #777777;}
+.negativeBtn {border: none; color: white; background-color: #c0c0c0 !important;}
+.negativeBtn:hover {background-color: #d0cece !important; color: #777777;}
+
+.tooltipActionButton {color: #777; padding: 10px 40px 0 40px;}
+.tooltipActionButton p { padding: 0 5px; cursor: pointer;}
+.tooltipActionButton p:hover { color: #00a7ae; font-weight: bolder;}
+
+
+.popupForm .title {font-size: 22px;  border-bottom: 1px solid #dedede; margin-bottom: 15px; padding-bottom: 5px;}
+.popupForm .form-group {margin-bottom: 10px;}
+
+
+#accountView .loginForm {  background: white; border-radius: 4px;  -webkit-box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);  position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);  }
+
+#loginForm .mainSection {padding-bottom: 20px; border-bottom: 1px solid #e0dbdb}
+#loginForm .leftSection { border-right: 1px solid #e0dbdb;}
+#loginForm .leftSection .btn-social {margin-bottom: 5px;}
+#loginForm .footerSection a {color: inherit;}
+#loginForm .footerSection { text-align: center;}
+#loginForm .footerSection1 { padding: 20px 0px 10px 0px;}
+#loginForm .footerSection2 { padding: 0px;}
+
+#signUpSuccess .emailIcon { margin: auto; width: 150px;}
+
+
+
+
+
+
+/* homepage */
+#homeView {height: 100%; position: relative;}
+#homeView .overlay {height: 100%;background-color: rgba(0,0,0,0.2);}
+#homeView .howWork {text-align: center;}
+#homeView .howWork label, #homeView .sponsorSlider label{font-size: large;margin-top: 20px;}
+#homeView .howWork .hrFooter, #homeView .sponsorSlider .hrFooter {border-bottom: 2px #23e6e6 solid; width: 80px;margin-top: 0px;}
+#homeView .howWorkIcon {padding-bottom: 20px; padding-left: 5px; padding-right: 5px;}
+#homeView .howWorkIcon div {text-align: center;}  /*display: flex;*/
+#homeView .howWorkIcon .myItem {display: -ms-flexbox;display: flex;}
+#homeView .howWorkIcon div img {margin: auto;}
+
+#homeView .introduction {background-color: #00a7ae; padding: 15px 0px;}
+#homeView .introduction .introTitle {color: white; text-align: center;}
+#homeView .introduction .introTitle .hrFooter {border-bottom: 1px white solid; width: 80px;margin-top: 0px;}
+#homeView .introduction .container iframe {width: 100%; height: 450px;}
+#homeView .introduction .container .flag {padding-bottom: 20px; border-bottom: 1px solid white;}
+#homeView .introduction .container .flag img {margin: 0px 10px;}
+#homeView .introduction .container .fullIntro {color: black; padding-top: 20px; padding-right: 5px; padding-left: 5px;}
+
+#homeView .sponsorSlider {padding: 0px 40px 20px 40px; text-align: center;}
+#homeView .sponsorSlider .rsc-container {overflow: hidden; width: 100%;}
+#homeView .sponsorSlider .slick-arrow::before {color: #777;}
+
+.homepageIntro {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 100%;}
+.homepageIntro .thumb_row1 {font-size: xx-large;}
+.homepageIntro .thumb_row4 {padding-top: 15px; text-decoration: underline}
+
+
+
+
+
+
+
+
+#leftBar .activeLeftButton {color: #68ddde; border-left: #68ddde 2px solid; font-weight: bolder;}
+#leftBar a {border: none;}
+#leftBar .askButton { text-align: center; background-color: #5cc5ca; color: white;}
+#leftBar .list-group .list-group-item {border-radius: 0px;}
+
+#tableSorter {text-align: right;} /*background-color: #dcdcdc;*/
+#tableSorter label {padding: 0px 10px; font-weight: normal; }
+#tableSorter label.activeSortButton {font-weight: bolder;}
+
+#tableSorterTransparent, #tableSorterTransparentWithLink {background-color: white; border-bottom: #e0dbdb solid 1px;     margin: 10px 0px;}
+#tableSorterTransparent label, #tableSorterTransparentWithLink label {padding: 0px 10px; font-weight: normal; margin-bottom: 0px; }
+#tableSorterTransparent label.activeSortTransparentButton, #tableSorterTransparentWithLink label.activeSortTransparentButton {font-weight: bolder; border-bottom: 2px #68ddde solid; padding-bottom: 3px;}
+#tableSorterTransparentWithLink label a {color: inherit;}
+#tableSorterTransparentWithLink label a:hover {text-decoration: none;}
+
+/*#dataTable {background-color: white; padding: 10px;}*/
+/*#dataTable table {width: 100%;}*/
+/*#dataTable #tableHeader {color: rgb(0, 167, 174);border-bottom: rgb(0, 167, 174) solid 1px;}*/
+/*#dataTable #tableHeader tr td {padding-bottom: 10px; text-align: center;}*/
+/*#dataTable #tableBody tr td {padding-bottom: 5px; padding-top: 5px; text-align: center;}*/
+/*#dataTable #tableBody .dataRow {border-bottom: #e0dbdb solid 1px;}*/
+/*#dataTable #tableBody .dataRow .dataColumnTitle {width: 55%; text-align: left;}*/
+/*#dataTable #tableBody .dataRow .dataColumnLastModified {width: 10%;}*/
+
+#tablePager { background-color: white; }
+#tablePager ul.pagination { margin: 10px auto; }
+#tablePager ul.pagination li a { border: none;margin-right: 2px; color: #949393; cursor: pointer;}
+#tablePager ul.pagination li a.selectedPage {background-color: #5cc5ca; border-radius: 40%}
+
+#rankingView .rankingDatalist {width: 100%;}
+#rankingView .rankingDatalist .dataColumnTitle .userRank_1 {background-color: #fd4f00;}
+#rankingView .rankingDatalist .dataColumnTitle .userRank_2 {background-color: #2cb339;}
+#rankingView .rankingDatalist .dataColumnTitle .userRank_3 {background-color: #68ddde;}
+#rankingView .rankingDatalist .dataRow {border-bottom: #e0dbdb solid 1px;}
+#rankingView .rankingDatalist .dataRow td {padding: 10px;}
+#rankingView .rankingDatalist .numStatRise {color: #68ddde; margin-right: 15px;}
+#rankingView .rankingDatalist .numStat {color: #b9b8b8;}
+
+.selectLanguageComponentWrapper { padding: 10px; background-color: #d5f8f8; border: 1px solid #55dae1; margin-bottom: 20px;}
+.selectLanguageComponentWrapper #selectLanguageComponent label {background-color: white;}
+#selectLanguageComponent {padding-left: 5px;}
+#selectLanguageComponent span { margin-right: 10px;}
+#selectLanguageComponent button {padding: 4px 10px;  background-color: #d8d8d8;}
+#selectLanguageComponent label {margin-left:10px;  padding: 4px 10px;  border: 1px #68ddde solid; color: #68ddde; font-weight: normal;}
+#selectLanguageComponent .languageChecked {background-color: #68ddde !important; color: white !important;}
+#selectLanguageComponent .languageDisabled {background-color: #d8d8d8 !important; color: white !important; border: none;}
+
+#tableContentArticle {padding-bottom: 25px;}
+#tableContentArticle .dataRow, #tableContentResponse .dataRow, #tableContentComment .dataRow {padding: 15px; border-bottom: #e0dbdb solid 1px;}
+#tableContentArticle .dataColumnLeft {text-align: center;}
+/*#tableContentArticle .dataColumnLeft p {margin: 0px;}*/
+#tableContentArticle .dataColumnLeft button {padding: 1px 5px;}
+
+#tableContentArticle .dataColumnMiddle { padding-left: 0px;}
+#tableContentArticle .dataColumnMiddle .articleTags {display: -ms-flexbox;display: flex;}
+#tableContentArticle .dataColumnMiddle .articleContent .viewMore {text-decoration: underline;}
+#tableContentArticle .dataColumnMiddle .icons {float: right; font-size: 17px; color: #68ddde;}
+#tableContentArticle .dataColumnMiddle .icons .fa {margin-left: 10px;}
+
+#tableContentArticle .articleInfo, #tableContentResponse .articleInfo, #tableContentComment .articleInfo {display: -ms-flexbox;display: flex;}
+#tableContentArticle .articleInfo .rightInfo, #tableContentResponse .rightInfo, #tableContentComment .rightInfo {position: absolute;  right: 10px;}
+
+#tableContentArticle .articleInfo .noAnswer {position: relative; left: 25px;}
+#tableContentArticle .articleInfo .noComment {position: absolute; right: 10%;}
+#tableContentArticle .articleInfo .noFollow {position: absolute; right: 10px;}
+#tableContentArticle .articleInfo label, #tableContentResponse .articleInfo label, #tableContentComment .articleInfo label {font-weight: normal;}
+#tableContentArticle .thumbnail {padding: 0px;}
+#tableContentArticle .dataColumnMiddle .articleTitle a, #tableContentResponse .articleTitle a, #tableContentComment .articleTitle a { /*color: inherit;*/  color: black; font-size: 115% }
+#tableContentResponse .dataRow .row1, #tableContentComment .dataRow .row1 { display: -ms-flexbox; display: flex;}
+#tableContentResponse .dataRow strong, #tableContentComment .dataRow strong {margin: 5px 0px;}
+#tableContentResponse .articleInfo, #tableContentComment .articleInfo {margin-top: 10px;}
+#tableContentResponse .articleInfo .fa, #tableContentComment .articleInfo .fa {margin: 0px 5px;}
+#tableContentResponse .userAvatarInfo, #tableContentComment .userAvatarInfo {width: 100%;}
+
+
+#articleView #article h1 {margin-top: 0px;}
+#articleView #article h1.title {font-size: large; color: black;}
+#articleView #article .title .fa {color: #68ddde; margin-right: 10px;}
+#articleView #article .row1.userInfo .section {padding-left: 0px; padding-right: 0px;}
+#articleView #article .row1 .tagListWrapper {display: inline-block;}
+#articleView #article .row1 .voteNum {text-align: center;  position: absolute;  right: 25px;}
+#articleView #article .row1 .voteNum .isVoted {background-color: #68ddde;}
+#articleView #article .content, .previewArticleContent {padding: 20px 0px; color: black;}
+#articleView #article .content img, .previewArticleContent img {max-width: 100%; height: auto;}
+#articleView #article .infoAction button:last-child {margin-left: 20px;}
+#articleView #article .infoAction .item { margin: 0 10px;}
+#articleView #article .infoAction .glyphicon {cursor: pointer;}
+#articleView #article .infoAction .isBookmarked {background-color: #68ddde; color: white;}
+
+#articleView #responseAcceptedList {border: 1px solid #22c0d4;-webkit-box-shadow: 0px 1px 10px #01a7bc;box-shadow: 0px 1px 10px #01a7bc; padding: 15px;  margin-top: 20px;}
+#articleView #responseAcceptedList .responseView hr {display: none;}
+#articleView #responseAcceptedList .responseView .commentsList hr {display: block;}
+.quote_username_in_comment_content	{color:#12A5A7; background:#ddf6f6; border-radius:5px; border:1px solid #bcbcbc;padding:1px 4px;}
+
+
+#ckeditorContent {padding: 10px 0px;}
+
+#sourceList {padding: 5px 0px 15px 0px; word-break: break-all;}
+#sourceList label {font-weight: normal;}
+#sourceList span { margin-left: 10px; padding: 3px;}
+#sourceList span a {text-decoration: inherit; color: inherit;}
+#sourceList span.numStatsCount { line-height: 30px;}
+
+.responseTitle {font-size: larger; padding: 10px 5px;}
+
+.tooltipDefaultForBtn {width: auto !important; background-color: #0e8fa3 !important; }
+.tooltipDefaultForBtn::before {border-bottom-color: #0e8fa3 !important;}
+.tooltipDefaultForBtn::after {border-top-color: #0e8fa3 !important;}
+
+.responseView .content, .previewResponseContent {padding: 10px 0px;}
+.responseView .content img, .previewResponseContent img {max-width: 100%; height: auto;}
+.responseView .row1 {display: -ms-flexbox;display: flex; position: relative}
+.responseView .row1 img.solved {width: 40px; height: 40px;}
+/*.responseView .row1 .setAcceptedAnswer {font-size: 20px; cursor: pointer;}*/
+/*.responseView .row1 .setAcceptedAnswer:hover {color: black;}*/
+.responseView .row1 .rightInfo {position: absolute; right: 0px; top: 5px;}
+.responseView .row1 .rightInfo label { margin: 0 10px; font-weight: normal;}
+.responseView .infoAction {margin-top: 10px;}
+.responseView .infoAction button:last-child {margin-left: 20px;}
+.responseView .infoAction .item { margin: 0 10px;}
+.responseView .infoAction .glyphicon {cursor: pointer;}
+.responseView .infoAction .isVoted { background-color: #68ddde; color: white;}
+.responseView.highlighted, .commentView.highlighted {background-color: #e8e8e8; padding: 10px;}
+
+.commentsList {background-color: #f3f3f3; padding: 10px; margin-top: 10px; position: relative;}
+.commentToQuestion .commentsList .topArrow {left: 135px;}
+.commentsList .topArrow {
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #ddd;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -7px;
+  left: 100px;
+}
+.commentsList .commentView hr {border-bottom: 1px solid white;}
+.commentsList .commentInput input {margin-left: 15px;}
+.commentsList .commentInput textarea {width: 100%; margin-top: 10px; padding: 5px;}
+.commentsList .commentInput .actionBtn {padding: 5px 0px;}
+
+
+.previewContentInPopup {max-height: 600px; padding-right: 0px;}
+.previewContentInPopup .popupbox-content {overflow-y: scroll;}
+
+
+#mostRelatedArticles {background-color: white;  padding: 5px 10px;}
+#mostRelatedArticles div.line { padding-bottom: 5px; }
+#mostRelatedArticles div a{ color: inherit; }
+
+
+#articleWrite { background-color: white; padding: 0 15px 20px 15px;}
+#articleWrite .title textarea, #articleWrite #tagInput input, #articleWrite .category select {width: 100%;}
+#articleWrite .title textarea {padding: 5px 10px; border: 1px solid #b3b0b0;}
+#articleWrite .title div {color: #b3b0b0; text-align: right;}
+#articleWrite .title .errorText, #articleWrite #tagInput .errorText, #articleWrite .category .errorText {position: absolute; left: 5px;}
+#articleWrite .category {padding: 7px 0px 15px 0px;}
+#articleWrite .thumbnailURL input { width: 100%; padding: 6px 10px;}
+#articleWrite .thumbnailURL .valid {border: 2px solid #55dae1;}
+#articleWrite .thumbnailURL .invalid { border: 2px solid red;}
+#articleWrite hr {margin-bottom: 0px; text-align: left; opacity: 1;}
+#articleWrite .languageSelection {margin-top: -10px;
+  border-bottom: 1px solid #e0dbdb;
+  border-left: 1px solid #e0dbdb;
+  border-right: 1px solid #e0dbdb;
+  padding: 20px 0px 10px 10px;}
+#articleWrite .languageSelection div:first-child {padding-bottom: 5px;}
+#articleWrite .languageSelection #languageSelectionArticleWriteButton.languages button {margin-right: 10px !important;background-color: white !important;padding: 1px 5px !important;}
+#articleWrite .languageSelection #languageSelectionArticleWriteButton.languages button.active {color:white !important; background-color: #68ddde !important;}
+#articleWrite .languageSelection #languageSelectionArticleWriteButton button.editIcon { padding: 6px 0px !important; background-color: #cacaca !important; }
+#articleWrite .languageSelection #languageSelectionArticleWriteButton button.editIcon span { margin: 0px;}
+#articleWrite .articleOptions label { margin-right: 20px;}
+
+#aboutUsView { text-align: justify;}
+
+#aboutUsIntroView {padding: 15px 10px;}
+#aboutUsIntroView .section, #privacyView .privacyContent .section {padding-top: 5px; padding-bottom: 10px;border-bottom: 1px dotted #c1dad7;}
+#aboutUsIntroView .section h4, #privacyView .privacyContent .section h4 {border-left: 2px #68ddde solid; padding: 10px 0 10px 10px;margin-left: -25px;}
+#aboutUsIntroView .section  p strong, #privacyView .privacyContent .section p strong, #privacyView .privacyContent .section div strong {color: #5ab4b5; padding-right: 10px;}
+
+#aboutUsContactView {padding-left: 10px;}
+#aboutUsContactView .location {border: 2px solid #5ab4b5;margin: 20px 10px 20px 0px; border-radius: 5px;}
+#aboutUsContactView .contactPoint .glyphicon {color: #5ab4b5; margin-right: 5px; }
+#aboutUsContactView .contactSNS { padding-bottom: 15px;}
+#aboutUsContactView .contactSNS a { margin-right: 5px;}
+
+
+#contributorView .contributorsBtn {display:block; text-align:center;margin-top:10px; font-size:18px;}
+
+#contributorView .contributorsBtn a {padding:7px 20px;border-radius:10px;
+  border-top:1px solid #c8c8c8;border-left:1px solid #c8c8c8;border-right:1px solid #a9a9a9;border-bottom:1px solid #a9a9a9;
+  font-size:15px; color:#126ea3 !important; font-weight:bold;
+  background-image:-webkit-gradient(linear,left top, left bottom,from(#ffffff),to(#d4f2f6));
+  background-image:-o-linear-gradient(#ffffff,#d4f2f6);
+  background-image:linear-gradient(#ffffff,#d4f2f6);
+  background-image:-webkit-linear-gradient(#ffffff,#d4f2f6);
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#d4f2f6', GradientType=0);
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.30);-webkit-box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.30);}
+
+#contributorView .contributorsBtn a:hover {background-image:-webkit-gradient(linear,left top, left bottom,from(#d4f2f6),to(#ffffff));background-image:-o-linear-gradient(#d4f2f6,#ffffff);background-image:linear-gradient(#d4f2f6,#ffffff);
+  background-image:-webkit-linear-gradient(#d4f2f6,#ffffff);
+  filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#d4f2f6', EndColorStr='#ffffff', GradientType=0);}
+#contributorView .more {text-align: center;}
+#contributorView .more p {margin: 0;}
+
+#privacyView { text-align: justify; padding-left: 10px;}
+#privacyView .index div { margin-bottom: 5px;}
+#privacyView .index a {color: inherit;}
+#privacyView .index a button { margin-right: 10px; }
+#privacyView .privacyContent .section .subSection { padding-left: 25px;}
+
+#aboutUsIntroView img {max-width: 100%; height: auto;}
+
+#feedbackView {padding-left: 3%; padding-right: 3%;}
+#feedbackView .form-group input {height: auto; padding: 3px 5px; }
+#feedbackView .form-horizontal .control-label {text-align: left !important;}
+
+#donationView {text-align: justify;}
+#donationView .donationAmount {border: 1px #68ddde solid; padding: 15px; margin-bottom: 20px;}
+#donationView .donationAmount .period {padding: 10px 0px;}
+#donationView .donationAmount .amount {padding: 2px 0px;}
+#donationView .donationAmount .amount label {font-weight: normal;}
+#donationView .donationAmount label input {margin-right: 5px;}
+#donationView .donationAmount .buttons { padding-top: 10px; display: -ms-flexbox; display: flex;}
+
+#topRanking {background-color: white;}
+#topRanking h4 { padding: 10px 0px 0px 10px; }
+#topRanking a { color: inherit;}
+#topRanking .articleTitle {padding: 2px 10px;}
+#topRanking .articleTitle button {margin-right: 5px; color: white; background-color: #cacaca; }
+#topRanking .articleTitle button.rank01 {background-color: red;}
+#topRanking .articleTitle button.rank02 {background-color: green;}
+#topRanking .articleTitle button.rank03 {background-color: #00a7ae;}
+
+
+#searchView .searchHeaderBar select, #searchView .searchHeaderBar .inputText {width: 100%;}
+#searchView .searchHeaderBar .inputTextAuthor {margin: 0px 20px;}
+
+
+#dashboardView .totalPoint {position: absolute;background-color: #cacaca;  padding: 5px;  font-weight: bolder;}
+#dashboardView .totalPointInMobile {position: inherit;}
+#dashboardView .dataList {margin-top: 10px;}
+#dashboardView .dataList .dataRow:first-child {border-top: 1px solid #cacaca;}
+#dashboardView .dataList .dataRow {border-bottom: 1px solid #cacaca;}
+#dashboardView .dataList .dataRow .action {margin-left: 10px;}
+#dashboardView .dataList .dataRow .verticalMiddle {margin-top: 13px;}
+#dashboardView .dataList .dataRow .fullInfo span {margin-right: 5px;}
+
+#profileUserView p {color: #b9b8b8}
+#profileUserView .row { padding: 7px 0px;}
+#profileUserView .row .private {color: #b9b8b8;}
+#profileUserView .row .private .icon {color: red; font-size: 16px;}
+
+.collapsibleButton {cursor: pointer;}
+.collapsibleButton:hover {text-decoration: underline;}
+
+#leftBarProfileInfo {background-color: white; padding: 10px; margin-top: 10px; margin-bottom: 15px;}
+#leftBarProfileInfo .Collapsible {margin: 7px 0px;}
+#leftBarProfileInfo a {text-decoration: none;}
+#leftBarProfileInfo .innerButton {padding: 5px 0 2px 5px;; padding-left: 10px; color: #b9b8b8;}
+#leftBarProfileInfo .innerButton:hover {color: grey;}
+
+
+
+#accountSettingView .row {margin: 15px 0px;}
+#accountSettingView .row > div:first-child {font-weight: bolder;}
+#accountSettingView .row .glyphicon {color: #68ddde; margin-left: 10px; cursor: pointer;}
+#accountSettingView .row .glyphicon.glyphicon-eye-close {color: white;}
+#accountSettingView .row .glyphicon.glyphicon-eye-open {color: #22a3a5;}
+
+#accountSettingView .row.birthdateRow .col-md-3 {padding-top: 7px;}
+#accountSettingView .row .birthdate .languageBadge {cursor: pointer;}
+#accountSettingView .row .birthdate .Dropdown-root {float: right;}
+#accountSettingView .row .birthdate .Dropdown-root .Dropdown-control {padding: 5px 52px 5px 10px;}
+#accountSettingView .row .birthdate .col-md-6:first-child {padding-top: 7px;}
+#accountSettingView .row .contact input {padding: 6px;}
+#accountSettingView .row .gender label {font-weight: normal; margin-right: 20px;}
+/*#accountSettingView .row .availableLanguages span { margin-right: 10px;}*/
+#accountSettingView .row .inputText {padding: 6px; width: 80%;}
+#accountSettingView .row textarea {width: 80%;}
+
+
+#partyConnectionSettingView, #notificationSettingView {padding: 5%;}
+#partyConnectionSettingView .row .btn-social {cursor: inherit;}
+
+#notificationListInNav {width: 400px;}
+#notificationListInNav .header {height: 25px;padding: 10px 10px 25px 10px;}
+#notificationListInNav .header .pull-left {font-weight: bolder;}
+#notificationListInNav .header .pull-right {color: #00a7ae; margin-left: 15px; cursor: pointer;}
+#notificationListInNav .content { border-bottom: 1px solid #e0dbdb; border-top: 1px solid #e0dbdb; padding: 5px 0px; text-align: left;} /*max-height: 400px; overflow-y: scroll;*/
+#notificationListInNav .content .notificationRow { padding: 5px 0px; border-bottom: 1px solid #e0dbdb; margin: 0px; cursor: pointer;}
+#notificationListInNav .content .notificationRow:hover {background-color: #d5f8f8;}
+#notificationListInNav .content .notificationRow:last-child {border-bottom: none;}
+#notificationListInNav .content .notificationRow a {color: inherit;}
+#notificationListInNav .content .notificationRow .upper {color: #1d2129;}
+#notificationListInNav .content .notificationRow .upper .isNew {width: 13px;  height: 13px;  margin-left: 5px;}
+#notificationListInNav .content .notificationRow.isNew {background-color: #e8e8e8;}
+
+#notificationListInNav .content .notificationRow img {width: 48px; height: 48px;}
+#notificationListInNav .footer {cursor: pointer; padding: 10px 0px;}
+#notificationListInNav .footer a {color: #00a7ae;}
+.myScrollContent_notification_drop_list {height: 400px;}
+.myScrollContent_namecard {height: 100px;}
+
+
+
+#activationConfirm { text-align: center; padding-top: 20px;}
+#activationConfirm div { padding-bottom: 15px;}
+
+#getInfoForm .languages .title, #getInfoForm .genders .title {margin-right: 20px;}
+#getInfoForm .languages .languageBadge, #getInfoForm .genders .gender {margin-right: 10px;}
+#getInfoForm .languages {display: -ms-flexbox;display: flex;}
+#getInfoForm .react-datepicker__portal {width: 100%; height: 100%;}
+
+
+
+/* https://bootsnipp.com/snippets/featured/circle-button */
+.btn-circle {
+  width: 30px;
+  height: 30px;
   text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+
+/*
+https://codepen.io/scottzirkel/pen/yNxNME
+
+https://codepen.io/ericrasch/pen/Irlpm
+https://css-tricks.com/line-on-sides-headers/
+http://vclever.com/blog/how-to-style-a-heading-with-horizontal-lines-either-side-using-css/
+https://stackoverflow.com/questions/23584120/line-before-and-after-title-over-image/23584310#23584310
+
+*/
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+}
+.hr-text:before {
+  content: "";
+  background: -webkit-linear-gradient(left, transparent, #818078, transparent);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#818078), to(transparent));
+  background: -o-linear-gradient(left, transparent, #818078, transparent);
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+/* 2018-11-26 MUN SIEON ADDED ADMIN STATS CSS*/
+.subTab{  width:100%;}
+.subTab > div{float: right;}
+.form-inline div{margin-left:1%;margin-right: 1%;}
+.mgt-15{margin-top:15px;}
+.cmn-text{margin-left:1.5%;margin-right: 1.5%}
+/* width:99 overflow auto -> table scroll issue .
+            TO-DO need to fix it*/
+.text-center{text-align: center;width:99% !important;}
+@media (max-width: 768px) {
+  .cmn-text{width:30% !important;}
+  .subTab > div{float: left;}
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (min-width: 768px) {
+  .cmn-text{width:50% !important;}
 }
+/*delete this*/
+.container{margin-top:200px;}
